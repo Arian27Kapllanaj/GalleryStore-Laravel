@@ -19,6 +19,14 @@
                 height: 100vh;
                 margin: 0;
             }
+
+            body {
+                background: url(images/backgroundImage.gif);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+            }
+
             .full-height {
                 height: 100vh;
             }
@@ -73,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Ztorex
+                    Gallery Store
                 </div>
 
             </div>
