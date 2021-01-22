@@ -21,10 +21,27 @@
             }
 
             body {
-                background: url(images/backgroundImage.gif);
+                background: url(images/image1.jpg); 
                 background-repeat: no-repeat;
                 background-attachment: fixed;
                 background-position: center;
+                animation-name: background-move;
+                animation-duration: 45s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                overflow: hidden;
+            }
+
+            @keyframes background-move {
+                0% {
+                    background-position: 0% 0%;
+                }
+                50% { 
+                    background-position: 50% 100%;
+                }
+                100% {
+                    background-position: 0% 0%;
+                }
             }
 
             .full-height {
@@ -45,6 +62,11 @@
             }
             .content {
                 text-align: center;
+                color: white;
+                border: 2px solid white;
+                padding: 50px;
+                margin: 20px;
+                background: rgba(0, 0, 0, 0.25);
             }
             .title {
                 font-size: 84px;
@@ -58,9 +80,7 @@
                 text-decoration: none;
                 text-transform: uppercase;
             }
-            .m-b-md {
-                margin-bottom: 30px;
-            }
+
         </style>
     </head>
     <body>
@@ -78,13 +98,11 @@
                     @endauth
                 </div>
             @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Gallery Store
+                <div class="content">
+                    <div class="title m-b-md">
+                        Gallery Store
+                    </div>
                 </div>
-
-            </div>
         </div>
     </body>
 </html>
