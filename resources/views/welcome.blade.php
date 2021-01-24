@@ -66,7 +66,7 @@
                 border: 2px solid white;
                 padding: 50px;
                 margin: 20px;
-                background: rgba(0, 0, 0, 0.25);
+                background: rgba(0, 0, 0, 0.8);
             }
             .title {
                 font-size: 84px;
