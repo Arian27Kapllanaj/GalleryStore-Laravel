@@ -143,17 +143,17 @@
     <li class="header">Another Menu</li>
     <li>
       <a href="#">
-        <i class="fa fa-users" aria-hidden="true"></i> Friends
+        <i class="fa fa-users" aria-hidden="true"></i> Settings
       </a>
     </li>
     <li>
       <a href="#">
-        <i class="fa fa-cog" aria-hidden="true"></i> Settings
+        <i class="fa fa-cog" aria-hidden="true"></i> Information
       </a>
     </li>
     <li>
-      <a href="#">
-        <i class="fa fa-info-circle" aria-hidden="true"></i> Information
+      <a href="{{ route('welcome') }}">
+        <i class="fa fa-info-circle" aria-hidden="true"></i> Logout
       </a>
     </li>
   </ul>

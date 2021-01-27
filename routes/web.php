@@ -17,8 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/welcome', 'HomeController@welcome')->name('welcome');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+//It does not allow to redirect to homepage without login
 Route::get('/homepage', 'HomeController@homepage')->name('homepage')->middleware('auth.basic');
