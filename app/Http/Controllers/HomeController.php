@@ -36,4 +36,8 @@ class HomeController extends Controller
     {
         return view('index');
     }
+
+    public function photoPage() {
+        return view('photo');
+    }
 }
