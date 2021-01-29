@@ -40,4 +40,8 @@ class HomeController extends Controller
     public function photoPage() {
         return view('photo');
     }
+
+    public function videoPage() {
+        return view('video');
+    }
 }

@@ -137,7 +137,7 @@
       </a>
     </li>
     <li>
-      <a href="#">
+      <a href="{{ route('video') }}">
         <i class="fa fa-tachometer" aria-hidden="true"></i> Video
       </a>
     </li>

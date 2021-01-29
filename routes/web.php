@@ -26,4 +26,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 //It does not allow to redirect to homepage without login
 Route::get('/homepage', 'HomeController@homepage')->name('homepage')->middleware('auth.basic');
 
+//Side Menu Routes
 Route::get('/photo', 'HomeController@photoPage')->name('photo');
+Route::get('/video', 'HomeController@videoPage')->name('video');
