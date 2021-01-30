@@ -29,3 +29,4 @@ Route::get('/homepage', 'HomeController@homepage')->name('homepage')->middleware
 //Side Menu Routes
 Route::get('/photo', 'HomeController@photoPage')->name('photo');
 Route::get('/video', 'HomeController@videoPage')->name('video');
+Route::get('/settings', 'HomeController@settingsPage')->name('settings');

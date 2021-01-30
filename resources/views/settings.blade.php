@@ -3,23 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Settings</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKt6Ikgg3SkflVMQqu_-QG-IRLia_deh4&callback=initMap&libraries=&v=weekly"
-      defer
-    ></script>
-    <style type="text/css">
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        position: static;
-        height: 75%;
-        width: 85.7%; 
-      }
-
-      /* Optional: Makes the sample page fill the window. */
+   
+    <style>
       html,
       body {
         height: 100%;
@@ -113,16 +100,6 @@
         padding-left: 220px;
         }
     </style>
-    <script>
-      let map;
-
-      function initMap() {
-        map = new google.maps.Map(document.getElementById("map"), {
-          center: { lat: 29.9755357, lng: 31.1289212 },
-          zoom: 2.2,
-        });
-      }
-    </script>
 </head>
 <body>
 <div class="sidebar-container">
@@ -158,8 +135,5 @@
     </li>
   </ul>
 </div>
-<div id="map" style="float: right;"></div>
-
-
 </body>
 </html>

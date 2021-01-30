@@ -120,9 +120,8 @@
         <i class="fa fa-tachometer" aria-hidden="true"></i> Video
       </a>
     </li>
-    <li class="header">Another Menu</li>
     <li>
-      <a href="#">
+      <a href="{{ route('settings') }}">
         <i class="fa fa-users" aria-hidden="true"></i> Settings
       </a>
     </li>

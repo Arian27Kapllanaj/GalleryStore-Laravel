@@ -44,4 +44,8 @@ class HomeController extends Controller
     public function videoPage() {
         return view('video');
     }
+
+    public function settingsPage() {
+        return view('settings');
+    }
 }
