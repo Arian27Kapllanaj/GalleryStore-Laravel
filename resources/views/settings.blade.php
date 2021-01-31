@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings</title>
+    <title>Photo</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
    
     <style>
+
       html,
       body {
         height: 100%;
@@ -102,9 +103,10 @@
     </style>
 </head>
 <body>
+      
 <div class="sidebar-container">
   <div class="sidebar-logo">
-    <button type="text" class="btn btn-primary" style="background-color: #2574A9;">Gallery Store</button> 
+    <button type="text" class="btn btn-primary" style="background-color: #2574A9;">Gallery Store</button>
   </div>
   <ul class="sidebar-navigation">
     <li class="header">Navigation</li>
@@ -124,7 +126,7 @@
       </a>
     </li>
     <li>
-      <a href="#">
+      <a href="{{ route('information') }}">
         <i class="fa fa-cog" aria-hidden="true"></i> Information
       </a>
     </li>
@@ -135,5 +137,6 @@
     </li>
   </ul>
 </div>
+
 </body>
 </html>

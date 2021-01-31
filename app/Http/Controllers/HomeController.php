@@ -48,4 +48,8 @@ class HomeController extends Controller
     public function settingsPage() {
         return view('settings');
     }
+
+    public function infoPage() {
+        return view('information');
+    }
 }

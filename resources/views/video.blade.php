@@ -126,7 +126,7 @@
       </a>
     </li>
     <li>
-      <a href="#">
+      <a href="{{ route('information') }}">
         <i class="fa fa-cog" aria-hidden="true"></i> Information
       </a>
     </li>
