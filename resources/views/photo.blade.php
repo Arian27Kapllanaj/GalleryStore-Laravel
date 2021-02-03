@@ -106,7 +106,9 @@
       
 <div class="sidebar-container">
   <div class="sidebar-logo">
-    <button type="text" class="btn btn-primary" style="background-color: #2574A9;">Gallery Store</button>
+  <a href="{{ route('homepage') }}">
+        <button class="btn btn-primary" type="button">Gallery Store</button>
+      </a>
   </div>
   <ul class="sidebar-navigation">
     <li class="header">Navigation</li>
