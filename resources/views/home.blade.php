@@ -15,6 +15,9 @@
                     @endif
 
                     You are logged in!
+                    <a href="{{ route('homepage') }}">
+                    <button type="button" class="btn btn-outline-secondary" style="float: right;">Homepage</button>
+                    </a>
                 </div>
             </div>
         </div>
