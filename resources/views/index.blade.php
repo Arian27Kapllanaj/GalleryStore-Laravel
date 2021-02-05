@@ -123,6 +123,7 @@
         });
 
       infoWindow = new google.maps.InfoWindow();
+
       const locationButton = document.createElement("button");
       locationButton.textContent = "Pan to Current Location";
       locationButton.classList.add("custom-map-control-button");
@@ -140,6 +141,7 @@
               infoWindow.setContent("Location found.");
               infoWindow.open(map);
               map.setCenter(pos);
+              loadMarkers();
             },
             () => {
               handleLocationError(true, infoWindow, map.getCenter());
@@ -150,7 +152,6 @@
           handleLocationError(false, infoWindow, map.getCenter());
         }
       });
-    }
 
     function handleLocationError(browserHasGeolocation, infoWindow, pos) {
       infoWindow.setPosition(pos);
@@ -161,6 +162,39 @@
       );
       infoWindow.open(map);
     }
+
+    //Google Map
+    function loadMarkers() {
+        var url = "http://127.0.0.2/GalleryStore-Laravel/public/all"; 
+           
+          xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var json = JSON.parse(this.responseText);
+                for(i = 0; i < json.length; i++) {
+                    console.log(json[i].description);
+                    var myLatlng = new google.maps.LatLng(json[i].lat, json[i].lon);
+                    console.log(myLatlng);
+                    var marker = new google.maps.Marker({
+                        position: myLatlng,
+                        map: map,
+                        title: 'Hello World!'
+                    });
+                    google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                        return function() {
+                            var infowindow = new google.maps.InfoWindow();
+                            infowindow.setContent(json[i].description);
+                            infowindow.open(map, marker);
+                        }
+                    })(marker, i));
+          
+                }
+            }
+          };
+          xmlhttp.open("GET", url, true);
+          xmlhttp.send();
+    }
+  }
+ 
     </script>
 </head>
 <body>

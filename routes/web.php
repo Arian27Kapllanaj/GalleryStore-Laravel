@@ -31,3 +31,6 @@ Route::get('/photo', 'HomeController@photoPage')->name('photo');
 Route::get('/video', 'HomeController@videoPage')->name('video');
 Route::get('/settings', 'HomeController@settingsPage')->name('settings');
 Route::get('/information', 'HomeController@infoPage')->name('information');
+
+//Google Map
+Route::get('/all', 'HomeController@get_all_points')->name('all');

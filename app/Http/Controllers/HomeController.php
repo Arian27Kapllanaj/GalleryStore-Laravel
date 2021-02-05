@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Map;
 
 class HomeController extends Controller
 {
@@ -51,5 +52,19 @@ class HomeController extends Controller
 
     public function infoPage() {
         return view('information');
+    }
+
+    //Google Map
+
+    public function display_markers() {
+        $data['google_maps_api_key'] = env('GOOGLE_MAPS_API_KEY', '');
+
+        return View('maps.display_markers', $data);
+    }
+
+    public function get_all_points() {
+        $points = Map::select('id', 'name', 'address', 'lat', 'lng')->get();
+
+        return response()->json($points);
     }
 }
