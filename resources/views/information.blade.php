@@ -103,7 +103,7 @@
     </style>
 </head>
 <body>
-      
+
 <div class="sidebar-container">
   <div class="sidebar-logo">
   <a href="{{ route('homepage') }}">
@@ -139,6 +139,9 @@
     </li>
   </ul>
 </div>
-
+<div class="container">
+        <p>Gallery Store Website build with Laravel 6 and bootstrap by Arian Kapllanaj. 
+        In this website you can upload, edit and delete photos and videos.</p>
+</div>
 </body>
 </html>
