@@ -140,10 +140,12 @@
   </ul>
 </div>
 <div class="container">
+<div class="text-center">
         <strong>Gallery Store</strong><br>
         <p>Gallery Store Website build with Laravel 6 and bootstrap by Arian Kapllanaj.<br> 
         In this website you can upload, edit and delete photos and videos. You can also check the photo's location on the map.<br>
         </p>
+</div>
 </div>
 </body>
 </html>
