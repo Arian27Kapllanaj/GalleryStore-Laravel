@@ -16,7 +16,7 @@
       #map {
         position: static;
         height: 75%;
-        width: 85.7%; 
+        width: 85.7%;
       }
       /* Optional: Makes the sample page fill the window. */
       html,
@@ -146,14 +146,16 @@
     }
     //Google Map
     function loadMarkers() {
-        var url = "http://127.0.0.2/GalleryStore-Laravel/public/all"; 
-           
+        var url = "http://127.0.0.1:8000/all";
+
+        var xmlhttp = new XMLHttpRequest();
+
           xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 var json = JSON.parse(this.responseText);
                 for(i = 0; i < json.length; i++) {
                     console.log(json[i].description);
-                    var myLatlng = new google.maps.LatLng(json[i].lat, json[i].lon);
+                    var myLatlng = new google.maps.LatLng(json[i].lat, json[i].lng);
                     console.log(myLatlng);
                     var marker = new google.maps.Marker({
                         position: myLatlng,
@@ -163,11 +165,11 @@
                     google.maps.event.addListener(marker, 'click', (function(marker, i) {
                         return function() {
                             var infowindow = new google.maps.InfoWindow();
-                            infowindow.setContent(json[i].description);
+                            infowindow.setContent(json[i].name);
                             infowindow.open(map, marker);
                         }
                     })(marker, i));
-          
+
                 }
             }
           };
@@ -175,7 +177,7 @@
           xmlhttp.send();
     }
   }
- 
+
     </script>
 </head>
 <body>
