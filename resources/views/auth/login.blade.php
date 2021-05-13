@@ -68,12 +68,10 @@
             <div class="auth-footer text-center pb-3">
                 {{ __('Don\'t have account yet?') }}
                 @if (Route::has('register'))
-                    <a href="{{ route('register') }}"><b>{{ __('Signup Now') }}</b></a>
+                    <a href="{{ route('register') }}"><b>{{ __('Sign up Now') }}</b></a>
                 @endif
             </div>
         </div>
     </div>
-    <div class="col-md-6 auth-col-slider">
-        <app-carousel></app-carousel>
-    </div>
+    <app-carousel></app-carousel>
 </div>

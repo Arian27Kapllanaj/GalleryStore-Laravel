@@ -22,7 +22,7 @@
 
     <style>
         .auth-col-slider {
-            background-color: #64bc8c;
+            transition: background-color .3s;
         }
 
         .btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
@@ -32,6 +32,12 @@
 
         .auth-password-field {
             position: relative;
+        }
+
+        @media (max-width: 767px) {
+            .auth-col-form {
+                height: 98%;
+            }
         }
 
         .auth-password-field a {
@@ -63,7 +69,6 @@
         }
 
         .VueCarousel {
-            padding-bottom: 100px;
         }
 
         .carousel .VueCarousel-wrapper {
@@ -71,11 +76,8 @@
         }
 
         .carousel-desc {
-            position: absolute;
             width: 80%;
-            top: calc(100% - 70px);
-            left: 50%;
-            transform: translateX(-50%);
+            margin-left: 10%;
             text-align: center;
             color: #fff;
         }
@@ -93,8 +95,7 @@
         }
 
         .VueCarousel-pagination {
-            position: absolute;
-            top: calc(100% + 20px);
+            margin-bottom: 20px;
         }
 
         .VueCarousel-dot-container {

@@ -1,5 +1,5 @@
 <template>
-    <div class="carousel">
+    <div class="col-md-6 auth-col-slider carousel" v-bind:style="{backgroundColor: colors[currentIndex]}">
         <carousel class="h-75 d-flex justify-content-center pt-5" :perPage="1" @page-change="onChange">
             <slide>
                 <img src="/images/best-free-bootstrap-admin-dashboard-templates.jpeg" />
@@ -34,6 +34,11 @@ export default {
                 'Powerful Photo Dashboard',
                 'Collaborate on Photos',
                 'Group and One to One Chat'
+            ],
+            colors: [
+                '#64bc8c',
+                '#029dcb',
+                '#f8cb00'
             ]
         }
     },

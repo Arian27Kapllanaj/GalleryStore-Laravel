@@ -1940,7 +1940,8 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       currentIndex: 0,
-      titles: ['Powerful Photo Dashboard', 'Collaborate on Photos', 'Group and One to One Chat']
+      titles: ['Powerful Photo Dashboard', 'Collaborate on Photos', 'Group and One to One Chat'],
+      colors: ['#64bc8c', '#029dcb', '#f8cb00']
     };
   },
   methods: {
@@ -37593,7 +37594,10 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "carousel" },
+    {
+      staticClass: "col-md-6 auth-col-slider carousel",
+      style: { backgroundColor: _vm.colors[_vm.currentIndex] }
+    },
     [
       _c(
         "carousel",
