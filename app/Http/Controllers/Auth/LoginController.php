@@ -42,4 +42,18 @@ class LoginController extends Controller
     {
         return 'username';
     }
+
+    public function datetime() {
+        $hour = date("g");
+
+        if ($hour > 5 && $hour < 12) {
+            return "Morning";
+        } elseif ($hour > 11 && $hour < 18) {
+            return "Afternoon";
+        } elseif ($hour > 17 && $hour < 24) {
+            return "Evening";
+        } elseif ($hour > 23 || $hour < 6) {
+            return "Night";
+        }
+    }
 }
